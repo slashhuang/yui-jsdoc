@@ -1,33 +1,36 @@
 {
-    "name": "yui-jsdoc",
-    "version": "0.0.2",
-    "description": "Javascript Document & Demo builder (base on smartDoc and YUIDoc and bootstrap 3).",
-    "homepage": "http://github.com:slashhuang/yui-jsdoc.git",
-    "main": "yuiJsDoc.js",
-    "scripts": {
-        "test": "node test.js",
-        "publish":"npm config set registry https://registry.npmjs.org/ && npm publish"
-    },
-    "author": {
-        "name": "slashhuang",
-        "email": "627284482@qq.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:slashhuang/yui-jsdoc.git"
-    },
-    "bugs": {
-        "url": "https://github.com/slashhuang/yui-jsdoc/issues"
-    },
-    "license": "BSD",
-    "dependencies": {
-        "yuidocjs": "0.3.45",
-        "express": "~3.1.2"
-    },
-    "devDependencies": {
-        "jshint": "2.4.x"
-    },
-    "bin" : {
-        "yuiJsDoc": "./bin/yuijsdoc"
-    }
+  "name": "yui-jsdoc",
+  "version": "0.0.3",
+  "description": "Javascript Document & Demo builder (base on smartDoc and YUIDoc and bootstrap 3).",
+  "homepage": "http://github.com:slashhuang/yui-jsdoc.git",
+  "main": "yuiJsDoc.js",
+  "scripts": {
+    "base": "node test.js",
+    "test": "node test.js --config ./test/docConfig.js",
+    "publish": "npm config set registry https://registry.npmjs.org/ && npm publish"
+  },
+  "author": {
+    "name": "slashhuang",
+    "email": "627284482@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:slashhuang/yui-jsdoc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/slashhuang/yui-jsdoc/issues"
+  },
+  "license": "BSD",
+  "dependencies": {
+    "camelcase": "^4.0.0",
+    "express": "~3.1.2",
+    "yuidocjs": "0.3.45"
+  },
+  "devDependencies": {
+    "jshint": "2.4.x",
+    "yargs": "^5.0.0"
+  },
+  "bin": {
+    "yuiJsDoc": "./bin/yuijsdoc"
+  }
 }

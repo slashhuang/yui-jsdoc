@@ -20,7 +20,7 @@ exports.build = function(config, callback) {
 
     function getOptions() {
         if (config) {
-            return config;
+            return require(path.resolve(fs.realpathSync('.'),config));
         }
         return require(fs.realpathSync('.') + '/docConfig.js');
     }

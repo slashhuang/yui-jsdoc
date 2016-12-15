@@ -1,5 +1,14 @@
-yui-jsdoc
-======================
+# yui-jsdoc
+
+## relese log
+1. 0.0.3
+- 增加配置文件路径选择
+```javascript
+    # 默认情况下就是根目录的docConfig.js
+    yuiJsDoc --config `path to your config file`
+```
+
+
 
 基于smartDoc + YUIDoc构建的Javascipt文档生成器。
 > 由于原来smartDoc模块作者迟迟不更新issue,遂基于它做了二次开发。

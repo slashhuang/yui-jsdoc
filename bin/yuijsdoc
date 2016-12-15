@@ -2,5 +2,10 @@
 
 var path = require('path');
 var fs = require('fs');
+var argv = require('yargs').argv;
+var configFile = null;
+if(argv && argv.config){
+    configFile=argv.config;
+}
 var dir = path.dirname(fs.realpathSync(__filename))+"/../";
-require(dir+'yuiJsDoc.js').build();
+require(dir+'yuiJsDoc.js').build(configFile);
