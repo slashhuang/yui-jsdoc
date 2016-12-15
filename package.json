@@ -5,11 +5,12 @@
     "homepage": "http://github.com:slashhuang/yui-jsdoc.git",
     "main": "yuiJsDoc.js",
     "scripts": {
-        "test": "node test.js"
+        "test": "node test.js",
+        "publish":"npm config set registry https://registry.npmjs.org/ && npm publish"
     },
     "author": {
-        "name": "Roy Zhang",
-        "email": "zhh77_1999@163.com"
+        "name": "slashhuang",
+        "email": "627284482@qq.com"
     },
     "repository": {
         "type": "git",
