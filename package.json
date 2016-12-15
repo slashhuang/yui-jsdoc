@@ -1,5 +1,5 @@
 {
-    "name": "smartdoc",
+    "name": "yui-jsdoc",
     "version": "0.0.1",
     "description": "Javascript Document & Demo builder (base on smartDoc and YUIDoc and bootstrap 3).",
     "homepage": "http://github.com:slashhuang/yui-jsdoc.git",
