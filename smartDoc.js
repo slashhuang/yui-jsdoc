@@ -62,7 +62,7 @@ exports.build = function(config, callback) {
 
         if (!config.helpers)
             config.helpers = [themeDir + "helpers/helpers.js"];
-           
+
         demoBuilder = require(config.demoBuilder);
 
         try {
@@ -284,9 +284,8 @@ exports.build = function(config, callback) {
             var view = new Y.DocView(opts.meta);
 
             var tmplFn = Y.Handlebars.compile(opts.layouts.demo);
-            html = tmplFn(view);
             builder.files++;
-            cb(html, view);
+            cb(tmplFn(view), view);
         });
     }
 

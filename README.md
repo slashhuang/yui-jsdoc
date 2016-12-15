@@ -1,7 +1,8 @@
-SmartDoc
+yui-jsdoc
 ======================
 
-基于YUIDoc构建的Javascipt文档生成器。 
+基于smartDoc + YUIDoc构建的Javascipt文档生成器。
+> 由于原来smartDoc模块作者迟迟不更新issue,遂基于它做了二次开发。
 
 详细介绍见我的博客: [JS文档和Demo自动化生成工具 - SmartDoc](http://www.cnblogs.com/zhh8077/p/4010991.html)和[注释编写说明](http://www.cnblogs.com/zhh8077/p/4011769.html)
 
@@ -9,7 +10,7 @@ SmartDoc
 
 license : BSD
 
-0.1.1 特性 
+0.1.1 特性
 --------------------
     * 加入@demo配置项，看可以动态抓取html和js的内容作为@example，同时支持扩展@demo读取
     * 支持jasmine测试js文件的单元代码抓取为@example
@@ -18,7 +19,7 @@ license : BSD
     * 主题改版
     * 去除@attribute属性设置，统一使用@property
 
-0.1.0 特性 
+0.1.0 特性
 --------------------
     * 基于Bootstrp3构建，排版和样式美化
     * 支持html和js的Demo生成,与查看
@@ -80,7 +81,7 @@ docConfig配置项说明
 
         //demo展示页面配置；需要加载的资源； 资源只能是css和js文件
         demo: {
-            
+
             //外部资源链接
             link : ['http://code.jquery.com/jquery-1.11.0.min.js'],
 

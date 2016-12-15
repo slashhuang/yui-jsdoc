@@ -1,8 +1,8 @@
 {
     "name": "smartdoc",
-    "version": "0.1.1",
-    "description": "Javascript Document & Demo builder (base on YUIDoc and bootstrap 3).",
-    "homepage": "https://github.com/zhh77/smartDoc",
+    "version": "0.0.1",
+    "description": "Javascript Document & Demo builder (base on smartDoc and YUIDoc and bootstrap 3).",
+    "homepage": "http://github.com:slashhuang/yui-jsdoc.git",
     "main": "smartDoc.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,10 +13,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/zhh77/smartDoc.git"
+        "url": "git@github.com:slashhuang/yui-jsdoc.git"
     },
     "bugs": {
-        "url": "https://github.com/zhh77/smartDoc/issues"
+        "url": "https://github.com/slashhuang/yui-jsdoc/issues"
     },
     "license": "BSD",
     "dependencies": {
