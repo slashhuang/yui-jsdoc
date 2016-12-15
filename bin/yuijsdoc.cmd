@@ -1,0 +1,1 @@
+node bin/yuijsdoc %1

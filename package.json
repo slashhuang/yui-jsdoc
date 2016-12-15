@@ -3,9 +3,9 @@
     "version": "0.0.1",
     "description": "Javascript Document & Demo builder (base on smartDoc and YUIDoc and bootstrap 3).",
     "homepage": "http://github.com:slashhuang/yui-jsdoc.git",
-    "main": "smartDoc.js",
+    "main": "yuiJsDoc.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "node test.js"
     },
     "author": {
         "name": "Roy Zhang",
@@ -27,6 +27,6 @@
         "jshint": "2.4.x"
     },
     "bin" : {
-        "smartDoc": "./bin/smartDoc"
+        "yuiJsDoc": "./bin/yuijsdoc"
     }
 }

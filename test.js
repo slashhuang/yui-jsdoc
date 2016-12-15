@@ -1,3 +1,3 @@
-var smartDoc = require('./smartDoc.js');
+var yuiJsDoc = require('./yuiJsDoc.js');
 
-smartDoc.build();
+yuiJsDoc.build();
