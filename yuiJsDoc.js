@@ -17,19 +17,25 @@ exports.build = function(config, callback) {
     extendYUIDoc();
 
     buildDoc(getOptions());
-
+    /**
+     * 配置文件
+     * 默认为根目录下的docConfig.js
+     * 也可以通过argv指定配置文件目录
+     */
     function getOptions() {
         if (config) {
             return require(path.resolve(fs.realpathSync('.'),config));
         }
         return require(fs.realpathSync('.') + '/docConfig.js');
     }
-
+    /**
+     * 编译任务入口
+     */
     function buildDoc(options) {
         var json;
 
         if (!options) {
-            console.log('The Options of smartDoc is not be defined!');
+            console.log('The Options of yuiJsDoc is not be defined!');
             return;
         }
 
@@ -64,7 +70,11 @@ exports.build = function(config, callback) {
             config.helpers = [themeDir + "helpers/helpers.js"];
 
         demoBuilder = require(config.demoBuilder);
-
+        /**
+         * json的输出格式
+         * 基本和webpack非常类似
+         * 
+         */
         try {
             json = (new Y.YUIDoc(options)).run();
         } catch (e) {
