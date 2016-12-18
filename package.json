@@ -6,7 +6,7 @@
   "main": "yuiJsDoc.js",
   "scripts": {
     "base": "node test.js",
-    "test": "node test.js --config ./test/docConfig.js",
+    "test": "node test.js --config ./test/docConfig.js --log true",
     "pub": "npm config set registry https://registry.npmjs.org/ && npm publish"
   },
   "author": {

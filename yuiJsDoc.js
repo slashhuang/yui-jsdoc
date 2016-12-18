@@ -1,9 +1,9 @@
 'use strict';
-
 exports.build = function(config, callback) {
     var Y = require('yuidocjs'),
         fs = require("fs"),
         path = require('path'),
+        argv = require('yargs').argv,
         demoBuilder,
         stat = fs.stat,
         basePath = path.dirname(fs.realpathSync(__filename)),
@@ -73,7 +73,6 @@ exports.build = function(config, callback) {
         /**
          * json的输出格式
          * 基本和webpack非常类似
-         * 
          */
         try {
             json = (new Y.YUIDoc(options)).run();
@@ -81,12 +80,21 @@ exports.build = function(config, callback) {
             console.log(e);
             return;
         }
+        /*输出编译数据库到日志,进行调试*/
+        var basePath = path.dirname(path.resolve(__filename));
+        var logPath= path.resolve(basePath,'./test/log.json');
+        if(argv.log){
+            var logStream = fs.createWriteStream(logPath);
+            logStream.write(JSON.stringify(json,2,2));
+        }else{
+            fs.unlink(path.resolve(logPath));
+        }
         options = Y.Project.mix(json, options);
 
         var builder = new Y.DocBuilder(options, json);
 
         var starttime = Date.now();
-        console.log('Start SmartDoc compile...');
+        console.log('Start yuiJsDoc compile...');
         console.log('Scanning: ' + options.paths);
         console.log('Output: ' + options.outdir);
 
@@ -95,7 +103,7 @@ exports.build = function(config, callback) {
 
             builder.writeDemo(function() {
                 callback && callback();
-                console.log('SmartDoc compile completed in ' + ((Date.now() - starttime) / 1000) + ' seconds');
+                console.log('yuiJsDoc compile completed in ' + ((Date.now() - starttime) / 1000) + ' seconds');
             });
         });
     }
