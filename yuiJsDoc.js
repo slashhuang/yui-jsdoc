@@ -87,7 +87,11 @@ exports.build = function(config, callback) {
             var logStream = fs.createWriteStream(logPath);
             logStream.write(JSON.stringify(json,2,2));
         }else{
-            fs.unlink(path.resolve(logPath));
+            fs.stat(logPath,function(err){
+                if(!err){
+                    fs.unlink(logPath);
+                }
+            });
         }
         options = Y.Project.mix(json, options);
 

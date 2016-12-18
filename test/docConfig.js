@@ -21,18 +21,18 @@ module.exports = {
         version: '1.1.0',
 
         //地址信息
-        url: 'https://github.com/zhh77/smartdoc',
+        url: 'https://github.com/slashhuang/yui-jsdoc',
 
         //导航信息
         navs: [{
             name: "Home",
-            url: "https://github.com/zhh77/smartdoc"
+            url: "https://github.com/slashhuang/yui-jsdoc"
         }, {
             name: "Document",
             url: "/"
         }, {
             name: "About",
-            url: "https://github.com/zhh77/smartdoc"
+            url: "https://github.com/slashhuang/yui-jsdoc"
         }]
     },
     //demo页面需要加载的js库
